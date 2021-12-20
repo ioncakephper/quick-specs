@@ -22,6 +22,24 @@ If you installed `quick-specs` globally, you can use the `quickspecs` tool at th
 quickspecs -h
 ```
 
+```
+Usage: quickspecs [options] <input>
+
+Quickly generate specification files for Jasmine/Jest
+
+Arguments:
+  input                       path to input filename in YAML format (default        
+                              extension: .yaml)
+
+Options:
+  -V, --version               output the version number
+  -o, --output <outfilename>  specification filename
+  -p, --path <path>           path to specification folder (default: "tests")       
+  -t, --target <platform>     target platform (choices: "jest", "jasmine", default: 
+                              "jest")
+  -h, --help                  display help for command
+```
+
 ### In code
 
 Create `my-specs.yaml`
