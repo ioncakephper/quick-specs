@@ -1,13 +1,13 @@
 {
   "name": "quick-specs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create test files quickly from .yaml files. Put your test or specification title in a .yaml file, and create test files for Jest or Jasmine. Useful for developers and designers who want to write specification quickly, and write the specification test code later.",
   "main": "index.js",
   "scripts": {
     "test": "jest --watchAll"
   },
   "bin": {
-     "quickspecs": "./bin/quick-specs.js"
+    "quickspecs": "./bin/quick-specs.js"
   },
   "author": "",
   "license": "ISC",
