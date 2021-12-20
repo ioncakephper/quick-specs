@@ -7,7 +7,7 @@
     "test": "jest --watchAll"
   },
   "bin": {
-     "qspec": "./bin/quick-specs.js"
+     "quickspecs": "./bin/quick-specs.js"
   },
   "author": "",
   "license": "ISC",
