@@ -1,0 +1,25 @@
+{
+  "name": "quick-specs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "bin": {
+     "qspec": "./bin/quick-specs.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "beautify": "^0.0.8",
+    "commander": "^8.3.0",
+    "file-easy": "^1.0.3",
+    "hbsr": "^1.0.6",
+    "lodash": "^4.17.21",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "jest": "^27.4.5"
+  }
+}
