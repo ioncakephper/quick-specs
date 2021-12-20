@@ -1,8 +1,8 @@
 
-const fileEasy = require('file-easy')
-const hbsr = require('hbsr')
-const { isArray, isString, isObject } = require('lodash')
-const yamljs = require('yamljs')
+const fileEasy                          = require('file-easy')
+const hbsr                              = require('hbsr')
+const { isArray, isString, isObject }   = require('lodash')
+const yamljs                            = require('yamljs')
 
 
 /**
@@ -44,11 +44,11 @@ function buildSpecification(item = {}, convertToText = false) {
 }
 
 /**
+ * Render a test suite javascript code.
  *
- *
- * @param {*} title
- * @param {*} [items=[]]
- * @return {*} 
+ * @param {string} title test suite description string.
+ * @param {array[string]} [items=[]] items inside a test suite, either a test case of a test suite
+ * @return {string} javascript code with a describe function. 
  */
 function renderSuite(title, items = []) {
     return hbsr.render(`describe('{{{title}}}', () => {
@@ -63,11 +63,11 @@ function renderSuite(title, items = []) {
 } 
 
 /**
+ * Render a test case javascript code.
  *
- *
- * @param {string} [item='']
- * @param {boolean} [shouldPass=true]
- * @return {*} 
+ * @param {string} [item=''] test case description text.
+ * @param {boolean} [shouldPass=true] whether to create a passing or a failing test case
+ * @return {string} javascript code with an it function.
  */
 function renderSingleSpec(item = '', shouldPass = true) {
     return hbsr.render(`it('{{{title}}}', () => {

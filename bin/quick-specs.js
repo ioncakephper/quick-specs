@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
-const program = require('commander');
-const fileEasy = require('file-easy');
-const yamljs = require('yamljs');
-const beautify = require('beautify');
+const beautify    = require('beautify');
+const program     = require('commander');
+const { Option }  = require('commander')
+const fileEasy    = require('file-easy');
 const { isArray } = require('lodash');
-const path = require('path');
-const qwk = require('../index');
-const { Option } = require('commander')
+const path        = require('path');
+const quickSpecs  = require('../index');
+
 
 program
     .description('Quickly generate specification files for Jasmine/Jest')
@@ -22,9 +22,9 @@ program
 
     .action((input, options) => {
         input = fileEasy.setDefaultExtension(input, '.yaml')
-        let appSpecification = qwk.load(input);
+        let appSpecification = quickSpecs.load(input);
 
-        let output = qwk.buildSpecification(appSpecification, isArray(appSpecification));
+        let output = quickSpecs.buildSpecification(appSpecification, isArray(appSpecification));
         output = beautify(output, { format: 'js' })
 
         let extraExt = options.target == 'jest' ? '.test' : 'Spec';
