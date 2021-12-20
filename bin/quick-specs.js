@@ -6,7 +6,7 @@ const yamljs = require('yamljs');
 const beautify = require('beautify');
 const { isArray } = require('lodash');
 const path = require('path');
-const { buildSpecification } = require('../index');
+const qwk = require('../index');
 const { Option } = require('commander')
 
 program
@@ -22,9 +22,9 @@ program
 
     .action((input, options) => {
         input = fileEasy.setDefaultExtension(input, '.yaml')
-        let appSpecification = yamljs.load(input);
+        let appSpecification = qwk.load(input);
 
-        let output = buildSpecification(appSpecification, isArray(appSpecification));
+        let output = qwk.buildSpecification(appSpecification, isArray(appSpecification));
         output = beautify(output, { format: 'js' })
 
         let extraExt = options.target == 'jest' ? '.test' : 'Spec';
