@@ -35,7 +35,7 @@ const quickSpecs  = require('../index');
 
 program
     .description('Quickly generate specification files for Jasmine/Jest')
-    .name('qspec')
+    .name('quickspecs')
     .version(require('../package.json').version)
 
 program
