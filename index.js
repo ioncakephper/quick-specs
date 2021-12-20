@@ -1,9 +1,9 @@
+
+const fileEasy = require('file-easy')
 const hbsr = require('hbsr')
 const { isArray, isString, isObject } = require('lodash')
 const yamljs = require('yamljs')
-const beautify = require('beautify')
-const fileEasy = require('file-easy')
-const path = require('path')
+
 
 /**
  * Load quick specification from file
@@ -43,7 +43,13 @@ function buildSpecification(item = {}, convertToText = false) {
     return renderSingleSpec(item);
 }
 
-
+/**
+ *
+ *
+ * @param {*} title
+ * @param {*} [items=[]]
+ * @return {*} 
+ */
 function renderSuite(title, items = []) {
     return hbsr.render(`describe('{{{title}}}', () => {
         {{#each specs as |spec|}}
@@ -56,6 +62,13 @@ function renderSuite(title, items = []) {
 })
 } 
 
+/**
+ *
+ *
+ * @param {string} [item='']
+ * @param {boolean} [shouldPass=true]
+ * @return {*} 
+ */
 function renderSingleSpec(item = '', shouldPass = true) {
     return hbsr.render(`it('{{{title}}}', () => {
         // Your code goes here...

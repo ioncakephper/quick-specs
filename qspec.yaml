@@ -1,0 +1,14 @@
+-
+  suite: load
+  items:
+    - throws error on missing filename
+    - returns an object when yaml file has a single suite
+    - returns an array when yaml file has several suite objects
+
+-
+  suite: buildSpecification
+  items:
+    - works when items parameter is an array and second argument is true
+    - works when items parameter is an object and second argument is false or missing
+    - should work with an empty items parameter
+    
