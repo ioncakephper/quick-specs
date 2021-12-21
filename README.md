@@ -1,5 +1,14 @@
 # quick-specs
 
+[![ioncakephper - quick-specs](https://img.shields.io/static/v1?label=ioncakephper&message=quick-specs&color=blue&logo=github)](https://github.com/ioncakephper/quick-specs "Go to GitHub repo")
+[![stars - quick-specs](https://img.shields.io/github/stars/ioncakephper/quick-specs?style=social)](https://github.com/ioncakephper/quick-specs)
+[![forks - quick-specs](https://img.shields.io/github/forks/ioncakephper/quick-specs?style=social)](https://github.com/ioncakephper/quick-specs)
+[![License](https://img.shields.io/badge/License-MIT-blue)](#license)
+[![Dependency Status](https://www.versioneye.com/user/projects/quick-specs/badge.svg)](https://www.versioneye.com/user/projects/quick-specs)
+[![Latest Stable Version](https://img.shields.io/npm/v/quick-specs.svg)](https://www.npmjs.com/package/quick-specs)
+[![NPM Downloads](https://img.shields.io/npm/dt/quick-specs.svg)](https://www.npmjs.com/package/quick-specs)
+[![NPM Downloads](https://img.shields.io/npm/dm/quick-specs.svg)](https://www.npmjs.com/package/quick-specs)
+
 Create test files quickly from .yaml files. Put your test or specification title in a .yaml file, and create test files for Jest or Jasmine. Useful for developers and designers who want to write specification quickly, and write the specification test code later.
 
 ## Installation
