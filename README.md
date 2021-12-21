@@ -290,7 +290,7 @@ In your `js` code:
 const qws = require('quick-specs');
 
 let appSpecs = qws.load('my-specs.yaml');
-let output = qws.buildSpecifications(appSpecs)
+let output = qws.buildSpecification(appSpecs)
 console.log(output);
 ```
 
