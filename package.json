@@ -22,8 +22,8 @@
     "jest-tests",
     "jasmine-tests",
     "test-tools",
-    "test-automation",
-    ],
+    "test-automation"
+  ],
   "license": "MIT",
   "dependencies": {
     "beautify": "^0.0.8",
