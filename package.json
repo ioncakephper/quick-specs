@@ -18,6 +18,12 @@
   "bugs": {
     "url": "https://github.com/ioncakephper/quick-specs/issues"
   },
+  "keywords": [
+    "jest-tests",
+    "jasmine-tests",
+    "test-tools",
+    "test-automation",
+    ],
   "license": "MIT",
   "dependencies": {
     "beautify": "^0.0.8",
