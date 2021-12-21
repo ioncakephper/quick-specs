@@ -4,7 +4,6 @@
 [![stars - quick-specs](https://img.shields.io/github/stars/ioncakephper/quick-specs?style=social)](https://github.com/ioncakephper/quick-specs)
 [![forks - quick-specs](https://img.shields.io/github/forks/ioncakephper/quick-specs?style=social)](https://github.com/ioncakephper/quick-specs)
 [![License](https://img.shields.io/badge/License-MIT-blue)](#license)
-[![Dependency Status](https://www.versioneye.com/user/projects/quick-specs/badge.svg)](https://www.versioneye.com/user/projects/quick-specs)
 [![Latest Stable Version](https://img.shields.io/npm/v/quick-specs.svg)](https://www.npmjs.com/package/quick-specs)
 [![NPM Downloads](https://img.shields.io/npm/dt/quick-specs.svg)](https://www.npmjs.com/package/quick-specs)
 [![NPM Downloads](https://img.shields.io/npm/dm/quick-specs.svg)](https://www.npmjs.com/package/quick-specs)
