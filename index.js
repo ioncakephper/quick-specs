@@ -73,9 +73,6 @@ function buildSpecification(item = {}, convertToText = false) {
  * @return {string} javascript code with a describe function. 
  */
 function renderSuite(title = '', items = []) {
-    if (isNull(title) || isNull(items = [])) {
-        return ''
-    }
     return hbsr.render(`describe('{{{title}}}', () => {
         {{#each specs as |spec|}}
     {{{spec}}}
@@ -95,9 +92,6 @@ function renderSuite(title = '', items = []) {
  * @return {string} javascript code with an it function.
  */
 function renderSingleSpec(item = '', shouldPass = true) {
-    if (isNull(item)) {
-        return ''
-    }
     return hbsr.render(`it('{{{title}}}', () => {
         // Your code goes here...
         expect({{#if shouldPass}}true{{else}}false{{/if}}).toBe(true);
