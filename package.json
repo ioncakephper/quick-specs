@@ -1,6 +1,6 @@
 {
   "name": "quick-specs",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Create test files quickly from .yaml files for Jest or Jasmine.",
   "main": "index.js",
   "scripts": {
