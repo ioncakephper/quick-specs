@@ -44,6 +44,8 @@ Options:
 
 1. A list of test cases
 
+Create `example-1.yaml`:
+
 ```yaml
 - Returns a positive number
 - Converts negative numbers to positive
@@ -72,6 +74,8 @@ it('Acccepts empty parameter list', () => {
 ```
 
 2. A test suite with several test cases
+
+Create `example-2.yaml`:
 
 ```yaml
 suite: My function
@@ -107,6 +111,8 @@ describe('My function', () => {
 ```
 
 3. A list of test suites, each suite has several test cases
+
+Create `example-3.yaml`:
 
 ```yaml
 -
@@ -170,6 +176,8 @@ describe('My second function', () => {
 
 
 4. Test suite with a mixture of suite and test cases
+
+Create `example-4.yaml`:
 
 ```yaml
 -
