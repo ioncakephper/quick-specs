@@ -19,6 +19,7 @@ describe('quick-specs', () => {
             let r = qws.buildSpecification({suite: "", items: ["First"]})
             expect(r).toMatch(/it\(/)
             
+            
         })
 
         it('object with suite and items containing a suite as item will render a callback containing a suite', () => {
