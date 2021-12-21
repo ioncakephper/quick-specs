@@ -23,7 +23,7 @@ SOFTWARE.
 */
 const fileEasy                          = require('file-easy')
 const hbsr                              = require('hbsr')
-const { isArray, isString, isObject }   = require('lodash')
+const { isArray, isString, isObject, isNull }   = require('lodash')
 const yamljs                            = require('yamljs')
 
 
@@ -68,11 +68,14 @@ function buildSpecification(item = {}, convertToText = false) {
 /**
  * Render a test suite javascript code.
  *
- * @param {string} title test suite description string.
+ * @param {string} [title=''] test suite description string.
  * @param {array[string]} [items=[]] items inside a test suite, either a test case of a test suite
  * @return {string} javascript code with a describe function. 
  */
-function renderSuite(title, items = []) {
+function renderSuite(title = '', items = []) {
+    if (isNull(title) || isNull(items = [])) {
+        return ''
+    }
     return hbsr.render(`describe('{{{title}}}', () => {
         {{#each specs as |spec|}}
     {{{spec}}}
@@ -92,6 +95,9 @@ function renderSuite(title, items = []) {
  * @return {string} javascript code with an it function.
  */
 function renderSingleSpec(item = '', shouldPass = true) {
+    if (isNull(item)) {
+        return ''
+    }
     return hbsr.render(`it('{{{title}}}', () => {
         // Your code goes here...
         expect({{#if shouldPass}}true{{else}}false{{/if}}).toBe(true);
