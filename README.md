@@ -22,7 +22,7 @@ If you installed `quick-specs` globally, you can use the `quickspecs` tool at th
 quickspecs -h
 ```
 
-```
+```txt
 Usage: quickspecs [options] <input>
 
 Quickly generate specification files for Jasmine/Jest
@@ -38,6 +38,222 @@ Options:
   -t, --target <platform>     target platform (choices: "jest", "jasmine", default: 
                               "jest")
   -h, --help                  display help for command
+```
+
+### Input file examples
+
+1. A list of test cases
+
+```yaml
+- Returns a positive number
+- Converts negative numbers to positive
+- Acccepts empty parameter list
+```
+
+```bash
+quickspecs example-1
+```
+
+```js
+it('Returns a positive number', () => {
+    // Your code goes here...
+    expect(true).toBe(true);
+})
+
+it('Converts negative numbers to positive', () => {
+    // Your code goes here...
+    expect(true).toBe(true);
+})
+
+it('Acccepts empty parameter list', () => {
+    // Your code goes here...
+    expect(true).toBe(true);
+})
+```
+
+2. A test suite with several test cases
+
+```yaml
+suite: My function
+items:
+    - Returns a positive number
+    - Converts negative numbers to positive
+    - Acccepts empty parameter list
+```
+
+
+```bash
+quickspecs example-2
+```
+
+```js
+describe('My function', () => {
+    it('Returns a positive number', () => {
+        // Your code goes here...
+        expect(true).toBe(true);
+    })
+
+    it('Converts negative numbers to positive', () => {
+        // Your code goes here...
+        expect(true).toBe(true);
+    })
+
+    it('Acccepts empty parameter list', () => {
+        // Your code goes here...
+        expect(true).toBe(true);
+    })
+
+})
+```
+
+3. A list of test suites, each suite has several test cases
+
+```yaml
+-
+    suite: My first function
+    items:
+        - Returns a positive number
+        - Converts negative numbers to positive
+        - Acccepts empty parameter list
+
+-
+    suite: My second function
+    items:
+        - Returns a positive number
+        - Converts negative numbers to positive
+        - Acccepts empty parameter list
+
+```
+
+
+```bash
+quickspecs example-3
+```
+
+```js
+describe('My first function', () => {
+    it('Returns a positive number', () => {
+        // Your code goes here...
+        expect(true).toBe(true);
+    })
+
+    it('Converts negative numbers to positive', () => {
+        // Your code goes here...
+        expect(true).toBe(true);
+    })
+
+    it('Acccepts empty parameter list', () => {
+        // Your code goes here...
+        expect(true).toBe(true);
+    })
+
+})
+
+describe('My second function', () => {
+    it('Returns a positive number', () => {
+        // Your code goes here...
+        expect(true).toBe(true);
+    })
+
+    it('Converts negative numbers to positive', () => {
+        // Your code goes here...
+        expect(true).toBe(true);
+    })
+
+    it('Acccepts empty parameter list', () => {
+        // Your code goes here...
+        expect(true).toBe(true);
+    })
+
+})
+```
+
+
+4. Test suite with a mixture of suite and test cases
+
+```yaml
+-
+    suite: My first function
+    items:
+
+        - 
+            suite: Dealing with test data
+            items:
+                - works with large numbers
+                - works with small numbers
+                - returns undefined when given non-numbers
+
+        - Returns a positive number
+        - Converts negative numbers to positive
+        - Acccepts empty parameter list
+
+-
+    suite: My second function
+    items:
+        - Returns a positive number
+        - Converts negative numbers to positive
+        - Acccepts empty parameter list
+
+```
+
+```bash
+quickspecs example-4
+```
+
+```js
+describe('My first function', () => {
+    describe('Dealing with test data', () => {
+        it('works with large numbers', () => {
+            // Your code goes here...
+            expect(true).toBe(true);
+        })
+
+        it('works with small numbers', () => {
+            // Your code goes here...
+            expect(true).toBe(true);
+        })
+
+        it('returns undefined when given non-numbers', () => {
+            // Your code goes here...
+            expect(true).toBe(true);
+        })
+
+    })
+
+    it('Returns a positive number', () => {
+        // Your code goes here...
+        expect(true).toBe(true);
+    })
+
+    it('Converts negative numbers to positive', () => {
+        // Your code goes here...
+        expect(true).toBe(true);
+    })
+
+    it('Acccepts empty parameter list', () => {
+        // Your code goes here...
+        expect(true).toBe(true);
+    })
+
+})
+
+describe('My second function', () => {
+    it('Returns a positive number', () => {
+        // Your code goes here...
+        expect(true).toBe(true);
+    })
+
+    it('Converts negative numbers to positive', () => {
+        // Your code goes here...
+        expect(true).toBe(true);
+    })
+
+    it('Acccepts empty parameter list', () => {
+        // Your code goes here...
+        expect(true).toBe(true);
+    })
+
+})
 ```
 
 ### In code
