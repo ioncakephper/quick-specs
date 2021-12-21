@@ -1,6 +1,6 @@
 {
   "name": "quick-specs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Create test files quickly from .yaml files. Put your test or specification title in a .yaml file, and create test files for Jest or Jasmine. Useful for developers and designers who want to write specification quickly, and write the specification test code later.",
   "main": "index.js",
   "scripts": {
@@ -9,8 +9,16 @@
   "bin": {
     "quickspecs": "./bin/quick-specs.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Ion Gireada",
+  "homepage": "https://github.com/ioncakephper/quick-specs#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ioncakephper/quick-specs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ioncakephper/quick-specs/issues"
+  },
+  "license": "MIT",
   "dependencies": {
     "beautify": "^0.0.8",
     "commander": "^8.3.0",
