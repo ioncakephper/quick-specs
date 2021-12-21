@@ -1,0 +1,11 @@
+-
+  suite: quick-specs
+  items:
+    - suite: load method
+
+    - suite: buildSpecification method
+      items:
+
+        - object with suite but no items will render a callback with no content
+        - object with suite and items as string will render a callback with it for each item
+        - object with suite and items containing a suite as item will render a callback containing a suite
