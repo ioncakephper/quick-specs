@@ -28,8 +28,9 @@ const beautify    = require('beautify');
 const program     = require('commander');
 const { Option }  = require('commander')
 const fileEasy    = require('file-easy');
-const { isArray } = require('lodash');
+const { isArray, isEmpty } = require('lodash');
 const path        = require('path');
+const { exit } = require('process');
 const quickSpecs  = require('../index');
 
 
@@ -39,12 +40,15 @@ program
     .version(require('../package.json').version)
 
 program
-    .argument('<input>', 'path to input filename in YAML format (default extension: .yaml)')
+    .argument('[input]', 'path to input filename in YAML format (default extension: .yaml)')
     .option('-o, --output <outfilename>', 'specification filename')
     .option('-p, --path <path>', 'path to specification folder', 'tests')
     .addOption(new Option('-t, --target <platform>', 'target platform').choices(["jest", "jasmine"]).default("jest"))
 
     .action((input, options) => {
+        if (isEmpty(input)) {
+            program.help()
+        }
         input = fileEasy.setDefaultExtension(input, '.yaml')
         let appSpecification = quickSpecs.load(input);
 
