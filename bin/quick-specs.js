@@ -52,7 +52,7 @@ program
         input = fileEasy.setDefaultExtension(input, '.yaml')
         let appSpecification = quickSpecs.load(input);
 
-        let output = quickSpecs.buildSpecification(appSpecification, isArray(appSpecification));
+        let output = quickSpecs.buildSpecification(appSpecification);
         output = beautify(output, { format: 'js' })
 
         let extraExt = options.target == 'jest' ? '.test' : 'Spec';

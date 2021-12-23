@@ -42,24 +42,22 @@ function load(filename) {
  * Build specifications as describe, it items. Compatible with Jest and Jasmine.
  *
  * @param {object|array[object]} [item={}] a specification item or array of specification items.
- * @param {boolean} [convertToText=false] whether to compress content when item is array
  * @return {string} javascript code containing describe and it statements
  */
-function buildSpecification(item = {}, convertToText = false) {
-
-    if (isObject(item) && !isArray(item) && !isString(item)) {
-        let title = item.suite;
-        let results = renderSuite(title, buildSpecification(item.items || []))
-        return results;
-    }
+function buildSpecification(item = {}) {
 
     if (isArray(item)) {
         let results =  item.map((singleSpec) => {
             return buildSpecification(singleSpec)
         })
         
-        return convertToText ? results.join('\n') : results;
+        return results.join('\n');
+    }
 
+    if (isObject(item) && !isArray(item) && !isString(item)) {
+        let title = item.suite;
+        let results = renderSuite(title, buildSpecification(item.items || []))
+        return results;
     }
   
     return renderSingleSpec(item);
