@@ -1,0 +1,47 @@
+name: ✨ Feature Request
+description: Suggest a new capability or enhancement.
+title: "[Feature]: "
+labels: ["enhancement"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve this project! Please complete the form below to submit your feature request.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this feature solve?
+      description: Describe the context or frustration that this feature addresses.
+      placeholder: I often find myself needing...
+      validations:
+        required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Describe the solution you'd like
+      description: Explain how you'd implement the feature or what it would do.
+      placeholder: It would be great if we could...
+      validations:
+        required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Have you tried any workarounds or other ideas?
+      placeholder: I've tried...
+      validations:
+        required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add screenshots, links, or prior discussion.
+      placeholder: Related issues, mockups, or links.
+      validations:
+        required: false
