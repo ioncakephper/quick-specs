@@ -1,5 +1,6 @@
 ---
 name: 🐛 Bug Report
+about: Use this template for reporting bugs.
 description: Report something that isn't working as expected.
 title: "[Bug] <brief description>"
 labels: bug
