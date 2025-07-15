@@ -1,9 +1,9 @@
+---
 name: 🐛 Bug Report
 description: Report something that isn't working as expected.
 title: "[Bug] <brief description>"
 labels: bug
 assignees: ''
-
 ---
 
 **Describe the bug**  
